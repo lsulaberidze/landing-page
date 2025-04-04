@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>XM Trading</title>
+    <title>XM Intermediary</title>
+    <link href="https://www.xm.com/ng-public/feb2ebbe/browser/favicon.ico" rel="shortcut icon" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <style>
         body {
             font-family: Poppins, sans-serif;
@@ -60,14 +61,20 @@
 
         .btn {
             display: inline-block;
-            padding: 10px 36px;
+            padding: 12px 36px;
             background-color: #0066ff;
             color: #fff;
             text-decoration: none;
             font-size: 14px;
-            font-weight: 500;
             border-radius: 6px;
             margin-top: 20px;
+            border: none;
+            cursor: pointer;
+            font-weight: 600;
+        }
+
+        .btn:hover {
+            background-color: #175cd3;
         }
 
         .footer {
@@ -118,6 +125,11 @@
             }
         }
     </style>
+    <script>
+        function openUrl() {
+            window.top.location.href = `{{ forwardURL }}`;
+        }
+    </script>
 </head>
 <body>
 
@@ -133,7 +145,7 @@
     </div>
     <h1>Ready to Get Back to Trading?</h1>
     <p>You're all set! Head back to the app to check your balance and explore new opportunities.</p>
-    <a href="#" class="btn">Go to XM App</a>
+    <button onclick="openUrl()" class="btn">Go to XM App</button>
 </div>
 
 <div class="footer">
